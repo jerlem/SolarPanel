@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'droid_sansregular';
+    src: url('../fonts/DroidSans-webfont.eot');
+    src: url('../fonts/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DroidSans-webfont.woff') format('woff'),
+         url('../fonts/DroidSans-webfont.ttf') format('truetype'),
+         url('../fonts/DroidSans-webfont.svg#droid_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#ccdae5;
+    
+    font-family:'droid_sansregular', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:16px;
+	color: #0f5591;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+a {
+	text-decoration: none;
+	color: #0f5591;
+}
+
+.bigger {
+	text-align: center;
+	font-size: 24px; 
+}
+
+.grey {
+	color: #505050;
+}
+
+/**
+ *	Header
+ *  -----------------------------
+ */
+
+header {
+	position: absolute;
+	top: 0; left: 0; right:0;
+    font-size:30px;
+	text-align: center;
+	padding-top: 10px;
+	width: 100%;
+	color: #fff;
+	height: 50px;
+	background-color: #0f5591	
+}
+
+
+
+/**
+ *	Title bar
+ *  -----------------------------
+ */
+ 
+.titleBar {
+	font-size: 18px;
+	text-align: center;
+	width: 100%;
+	padding-top: 10px;
+	height: 30px;
+	color: #fff;
+	background-color: #505050;
+}
+
+.btnMenuItem {
+	width: 100%
+	text-decoration: none;
+	color: #fff;
+}
+
+
+/**
+ *	Panels
+ *  -----------------------------
+ */
+.panel {
+	position: absolute;
+	width: 100%;
+	top: 60px;
+}
+ 
+.pannelContent {
+	font-size: 16px;
+	text-align: center;
+}
+
+.pannelContent img {
+	width: 60%;
+	border: 1px solid #505050;
+}
+#installTypeIntegrated img , #installTypeSimple img , #installTypeGrounded img {
+	width: 55%;
+}
+
+#panelInstallation { display: none; }
+#panelNbPannels { display: none; }
+#panelOrientation { display: none; }
+#panelOrientation { displya: none; }
+#panelCalcul { display: none; }
+#panelSettings {display: none; }
+#panelAbout {display: none;}
+
+/**
+ *	Footer Menu 
+ *  -----------------------------
+ *	menu and bottom button
+ */
+footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #fff;
+	border-top: 1px solid #fbfbfb;
+}
+
+footer span{
+	display: block;
+	width: 33%;
+	float:left;
+	text-align: center;
+}
+
+footer span a{
+	margin-left: 40px;
+	margin-top: 10px;
+	display: block;
+	width: 40px;
+	height: 40px;
+}
+
+#btnHome {	 				background: url(../img/icons.png) -138px 0 no-repeat; }
+#btnSettings {				background: url(../img/icons.png) -178px 0 no-repeat; }
+#btnAbout { 				background: url(../img/icons.png) -218px 0 no-repeat; }
+
+#btnHome.btnSelected {		background: url(../img/icons.png) -138px -40px no-repeat; }
+#btnSettings.btnSelected { 	background: url(../img/icons.png) -178px -40px no-repeat; }
+#btnAbout.btnSelected { 	background: url(../img/icons.png) -218px -40px no-repeat; }
+
+
+#numberSelector{
+	margin-top: 40px;
+	font-size: 36px;
+}
+
+#nbPannelDecrease, #nbPannelIncrease{
+	width: 40px;
+	height: 40px;
+}
+
+#nbPannelDecrease, #nbPannelIncrease , #nbPannelValidate, #orientationValidate, #calculNew{
+	display: inline;
+	margin: 10px;
+	text-align: center;
+	padding: 3px;
+	color: #fff;
+	font-size: 32px;
+	text-decoration: none;
+	background-color: #0f5591;
+	border: none;
+}
+
+.larg {
+	clear: both;
+	width: 100%;
+}
+
+
+#listOrientation, #listInclinaison{
+	display:block;
+	float: left;
+   	width: 50%;
+}
+
+#listOrientation a, #listInclinaison a {
+	display: block;
+	text-align: left;
+	margin-left: 25%;
+	margin-top: 15px;
+	text-indent: 30px;
+}
+
+#listOrientation img,  #listInclinaison img{
+	border: none;
+	padding-right: 10px;
+	width: 23px;
+	height: 23px;
+}
+#orientationIcon, #inclinaisonIcon {
+	display: block;
+	margin-top: 5px;
+	width: 58px;
+	height: 58px;
+}
+
+#orientationIcon { 	background: url(../img/icons.png) 0 0 no-repeat; }
+#inclinaisonIcon { 	background: url(../img/icons.png) -58px 0 no-repeat; }
+
+#estimationLabels {
+	font-size: 18px;
+	display:block;
+	float: left;
+	text-align: right;
+	margin-right: 5%;
+   	width: 45%;
+	color: #505050;
+}
+
+#estimationValues {
+	font-size: 18px;
+	display:block;
+	float: left;
+	text-align: left;
+   	width: 50%;
+}
+
+#listIrradiation, #listSolarMask{
+	display:block;
+   	width: 100%;
+}
+
+#listIrradiation a, #listSolarMask a {
+	display: block;
+	text-align: left;
+	margin-left: 25%;
+	margin-top: 10px;
+	text-indent: 30px;
+}
+
+#listIrradiation img,  #listSolarMask img{
+	border: none;
+	padding-right: 10px;
+	width: 23px;
+	height: 23px;
+}
+
+

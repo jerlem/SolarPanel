@@ -1,0 +1,4 @@
+#Sat Sep 15 22:59:30 CEST 2018
+base.0=D\:\\work\\CordovaApps\\SolarPanels\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
+renamed.0=classes.dex
+file.0=D\:\\work\\CordovaApps\\SolarPanels\\platforms\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0\\classes.dex

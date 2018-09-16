@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<html>
+<head>
+<charset 
+        
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">
+<meta name="msapplication-tap-highlight" content="no">
+<meta name="viewport" content="user-scalable=no,
+        		initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+<link rel="stylesheet" type="text/css" href="css/solarpanel.css">
+<title>Solar Panels</title>
+</head>
+
+<body>
+<script type="text/javascript" src="js/core.js"></script>
+<script type="text/javascript" src="js/solarpanel.js"></script>
+<script type="text/javascript" src="js/simulation.js"></script>
+
+
+<header> Simulateur Photovoltaïque </header>
+
+<div class="panel" id="pannelHome">
+  <div class="titleBar">Installation PhotoVoltaïque</div>
+  <div class="pannelContent">
+    <p> <a id="installParticulier" href="#"> <img src="img/habitation-particulier.jpg"><br>
+      Installation Particulier</a> </p>
+    <p> <a id="installPro" href="#"> <img src="img/habitation-professionnel.jpg"><br>
+      Installation Professionnel</a> </p>
+  </div>
+</div>
+
+
+<div class="panel" id="panelInstallation">
+  <div class="titleBar"><a href="#" id="btnMenuInstallType" class="btnMenuItem"> < Type d'installation </a></div>
+  <div class="pannelContent">
+    <p> <a id="installTypeIntegrated" href="#">
+      <img src="img/installation-integre.jpg"><br>
+      Intégré au bâti</a> </p>
+    <p> <a id="installTypeSimple" href="#">
+      <img src="img/installation-simple.jpg"><br>
+      Intégré simplifié</a> </p>
+    <p> <a id="installTypeGrounded" href="#">
+      <img src="img/installation-sol.jpg"><br>
+      Installation au sol</a> </p>
+  </div>
+  
+  
+</div>
+<div class="panel" id="panelNbPannels">
+  <div class="titleBar"><a href="#" id="btnMenuPannelsNumber" class="btnMenuItem"> < Nombre de panneaux </a></div>
+  <div class="pannelContent">
+    <p> <img src="img/installation-integre.jpg"><br>
+      <br>
+      <span class="bigger"> Sélectionnez le 
+      nombre<br>
+      de panneaux: </span>
+    <div id="numberSelector">
+      <input type="button" id="nbPannelDecrease" value="-" />
+      <span id="nbPannels">1</span>
+      <input type="button" id="nbPannelIncrease" value="+" />
+    </div>
+    </p>
+    <input type="button" id="nbPannelValidate" value=" valider " />
+  </div>
+</div>
+
+
+<div class="panel" id="panelOrientation">
+  <div class="titleBar"><a href="#" id="btnMenuOrientation" class="btnMenuItem"> < Orientation et inclinaison </a></div>
+  <div class="pannelContent">
+    <div id="listOrientation"><br>
+		<a id="orientationIcon" href="#"></a>
+		<a href="#" id="orientationS"><img src="img/listchecked.png" alt="">Sud</a>
+		<a href="#" id="orientationSE"><img src="img/listunchecked.png" alt="">Sud-Est</a>
+		<a href="#" id="orientationSO"><img src="img/listunchecked.png" alt="">Sud-Ouest</a>
+		<a href="#" id="orientationE"><img src="img/listunchecked.png" alt="">Est</a>
+		<a href="#" id="orientation0"><img src="img/listunchecked.png" alt="">Ouest</a>
+    </div>
+    <div id="listInclinaison">
+		<a id="inclinaisonIcon" href="#"></a>
+		<a href="#" id="inclin0"><img src="img/listunchecked.png" alt="">0 °</a>
+		<a href="#" id="inclin15"><img src="img/listunchecked.png" alt="">15 °</a>
+		<a href="#" id="inclin25"><img src="img/listunchecked.png" alt="">25 °</a>
+		<a href="#" id="inclin45"><img src="img/listchecked.png" alt="">45 °</a>
+		<a href="#" id="inclin50"><img src="img/listunchecked.png" alt="">50 °</a>
+        <a href="#" id="inclin70"><img src="img/listunchecked.png" alt="">70 °</a>
+        <a href="#" id="inclin90"><img src="img/listunchecked.png" alt="">90 °</a>
+	</div>
+    <input type="button" id="orientationValidate" value=" valider " />
+  </div>
+</div>
+
+
+<div class="panel" id="panelCalcul">
+  <div class="titleBar"><a href="#" id="btnMenuCalcul" class="btnMenuItem"> < Simulation </a></div>
+  <p class="bigger"> Estimation de la production<br>
+    d'éléctricite : </p>
+  <div class="pannelContent">
+    <div id="estimationLabels">
+      <p> Type d'habitation<br>
+        Type d'installation<br>
+        Nombre de panneaux<br>
+        Orientation<br>
+        Inclinaison<br>
+      </p>
+      <p>Production (KwC)</p>
+      <p>Production journalière</p>
+      <p>Revenu estimé<br>
+        (par an)</p>
+    </div>
+    <div id="estimationValues">
+      <p> <span id="valueHabitation">Particulier</span><br>
+        <span id="valueInstallation">Au Sol</span><br>
+        <span id="valueSuperficie">1.28 M²</span><br>
+        <span id="valueOrientation">Sud-Est</span><br>
+        <span id="valueInclinaison">25 °</span><br>
+      </p>
+      <p><span id="valueProductionKwC">1067 KwC</span></p>
+      <p><span id="valueProductionDay">3.35 €</p>
+      <p><span id="valueRevenue">1229.93 €</p>
+    </div>
+    <div class="larg">
+      <input type="button" id="calculNew" value=" Nouveau " />
+    </div>
+  </div>
+</div>
+
+<div class="panel" id="panelSettings">
+  <div class="titleBar"><a href="#" id="btnMenuSettings" class="btnMenuItem">< Réglages </a></div>
+  <div class="pannelContent">
+    <div id="listIrradiation"><br>
+		<span class="bigger">Taux d'exposition moyen:</span>
+		<a href="#" id="irradiation1000"><img src="img/listchecked.png">1000 kWh / m²</a>
+		<a href="#" id="irradiation1300"><img src="img/listunchecked.png">1300 kWh / m²</a>
+		<a href="#" id="irradiation1500"><img src="img/listunchecked.png">1500 kWh / m²</a>
+		<a href="#" id="irradiation1700"><img src="img/listunchecked.png">1700 kWh / m²</a>
+    </div>
+    <div id="listSolarMask">
+   		<span class="bigger"><br>
+   		Masque Solaire (simplifié):</span>
+		<a href="#" id="mask055"><img src="img/listunchecked.png" alt="">0.55</a>
+		<a href="#" id="mask065"><img src="img/listchecked.png" alt="">0.65</a>
+		<a href="#" id="mask075"><img src="img/listunchecked.png" alt="">0.75</a>
+		<a href="#" id="mask085"><img src="img/listunchecked.png" alt="">0.85</a>
+	</div>
+  </div>
+</div>
+
+
+<div class="panel" id="panelAbout">
+  <div class="titleBar">A propos...</div>
+  <div class="pannelContent">
+   	<p class="bigger">A propos de l’application<br>
+	"Simulateur Photovoltaïque"</p>
+	<p><i>(c) Jérôme Lemarchand, 2018</i></p>
+    <p class="grey">
+    	L’application de simulation de<br>
+		production photovoltaïque propose<br>
+        de donner une approximation de<br>
+        rendement d'une installation.<br>
+		<br>
+        Cette Simulation se base sur des taux<br>
+        d’irradiations moyens observés en <br>
+        France ainsi que masques solaires<br>
+        moyens pour donner une idée de la <br>
+        production solaire possible.<br>
+		<br>     
+        Pour des données plus precises <br>
+        adressez vous à un professionnel<br>
+        en installation Photovoltaïque.
+  </div>
+</div>
+
+
+<footer>
+	<span> <a id="btnHome" class="btnSelected" href="#"></a></span>
+    <span> <a id="btnSettings" href="#"></a> </span>
+    <span> <a id="btnAbout" href="#"></a> </span>
+</footer>
+
+</body>
+</html>
